@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Household Inventory</title>
+  </head>
+  <body>
+    <h1>Household Inventory</h1>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Location</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Expiration Date</th>
+        <th>Purchase Date</th>
+        <th>Purchase Price</th>
+        <th>Supplier</th>
+        <th>Warranty Start Date</th>
+        <th>Warranty End Date</th>
+        <th>Usage Instructions</th>
+      </tr>
+      {% for row in data %}
+        <tr>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2] }}</td>
+          <td>{{ row[3] }}</td>
+          <td>{{ row[4] }}</td>
+          <td>{{ row[5] }}</td>
+          <td>{{ row[6] }}</td>
+          <td>{{ row[7] }}</td>
+          <td>{{ row[8] }}</td>
+          <td>{{ row[9] }}</td>
+          <td>{{ row[10] }}</td>
+          <td>{{ row[11] }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    <a href="/add">Add Item</a>
+  </body>
+</html>
